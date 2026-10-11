@@ -9,5 +9,9 @@ pluginManagement {
 	}
 }
 
+if (System.getProperty("os.name", "").toLowerCase().contains("win")) {
+	System.setProperty("javax.net.ssl.trustStoreType", "WINDOWS-ROOT")
+}
+
 // Should match your modid
 rootProject.name = 'meowdifications'

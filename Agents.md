@@ -175,6 +175,49 @@ Inject non-destructively into `net.minecraft.world.entity.animal.Cat` via mixin 
   - `entity.meowdifications.<name>`
   - `subtitles.meowdifications.<name>`
 - English (`en_us.json`) is the baseline locale and must always be up-to-date.
+- For `BlockItem`s, ensure `.useBlockDescriptionPrefix()` is invoked on `Item.Properties` so `block.meowdifications.<name>` matches, and supply both `block.` and `item.` keys in `en_us.json` for resilience.
+
+### 5.5. Minecraft 26.3 API Specifics & Architecture
+- **Feline Package**: Vanilla `Cat` is located in `net.minecraft.world.entity.animal.feline.Cat`.
+- **Mandatory `setId` on Registrations**: Both `BlockBehaviour.Properties` and `Item.Properties` require explicit `.setId(ResourceKey)` before instantiation:
+  ```java
+  ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, Meowdifications.id(name));
+  T block = factory.apply(properties.setId(blockKey));
+  ```
+  Failing to set `id` results in runtime `NullPointerException: Block id not set` or `itemIdOrThrow` exceptions.
+- **Item Definitions (`assets/<namespace>/items/<item>.json`)**:
+  - Minecraft 26.3 uses item definition files in `items/` rather than relying solely on `models/item/`.
+  - Every item (including `BlockItem`s) must have an item definition:
+    ```json
+    { "model": { "type": "minecraft:model", "model": "meowdifications:item/<item>" } }
+    ```
+    Without this, items appear as black-and-pink missing texture squares in inventories.
+- **Block Models & GUI Lighting**:
+  - Custom voxel block models must declare `"parent": "minecraft:block/block"` to inherit isometric GUI transforms, lighting, and first/third-person handheld positions.
+- **Entity Interaction Signature**:
+  - `Entity.interact(Player player, InteractionHand hand, Vec3 location)` takes a 3D hit vector `location`.
+  - Save/Load logic uses modern `addAdditionalSaveData(ValueOutput)` and `readAdditionalSaveData(ValueInput)`.
+  - Spawning drops from entities requires passing `ServerLevel`: `this.spawnAtLocation(serverLevel, stack)`.
+- **Recipe Format (26.3)**:
+  - Shaped `key`: `"X": "minecraft:item_id"`, `"Y": "#minecraft:tag_id"` (raw strings, `#` prefix for tags; legacy `{"item": "..."}` objects will fail datapack parsing).
+  - Shapeless `ingredients`: `[ "minecraft:item_id", "#minecraft:tag_id" ]`.
+  - Recipe results use `"id"` and `"count"`: `{ "id": "meowdifications:cat_bed", "count": 1 }`.
+- **Advancement Trigger Conditions**:
+  - Predicates for entity matching use registry keys in `BuiltInRegistries.ENTITY_SUB_PREDICATE_TYPE`. The key for matching entity types is `"minecraft:entity_type"`:
+    ```json
+    "predicate": { "minecraft:entity_type": "minecraft:cat" }
+    ```
+
+### 5.6. Build Environment & Windows Quirks
+- **JDK 25**: Requires JDK 25 (`C:\Program Files\Java\jdk-25.0.4.1`). Always prefix Gradle executions with `$env:JAVA_HOME = "C:\Program Files\Java\jdk-25.0.4.1"`.
+- **Windows Certificate Store (SSL)**:
+  - Piston/Mojang asset downloads (`downloadAssets`) on Windows can fail with PKIX path building errors unless Java uses the Windows Certificate Authority store.
+  - Handled conditionally in `settings.gradle` by checking `System.getProperty("os.name")` so that Linux CI runners (GitHub Actions) remain unaffected and use their standard keystore without errors.
+- **Loom & Datagen Duplicates**:
+  - `src/main/generated` is automatically added as a resource root by Fabric Loom.
+  - To prevent duplicates conflicts during `processResources` and `sourcesJar`, configure `tasks.withType(AbstractCopyTask).configureEach { duplicatesStrategy = DuplicatesStrategy.EXCLUDE }` in `build.gradle`.
+- **Git Ignore**:
+  - Keep `src/main/generated/.cache/` ignored while committing generated assets and data.
 
 ---
 
