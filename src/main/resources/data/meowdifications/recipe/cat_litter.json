@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		{
+			"tag": "minecraft:sand"
+		},
+		{
+			"item": "minecraft:clay_ball"
+		},
+		{
+			"item": "minecraft:paper"
+		}
+	],
+	"result": {
+		"count": 4,
+		"id": "meowdifications:cat_litter"
+	}
+}

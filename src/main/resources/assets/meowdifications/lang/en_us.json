@@ -18,5 +18,13 @@
 	"block.meowdifications.catnip_crop": "Catnip Crop",
 	"entity.meowdifications.yarn_ball": "Yarn Ball",
 	"subtitles.meowdifications.item.toy.squeak": "Toy squeaks",
-	"subtitles.meowdifications.item.feather_wand.swish": "Feather wand swishes"
+	"subtitles.meowdifications.item.feather_wand.swish": "Feather wand swishes",
+	"advancements.meowdifications.root.title": "Meowdifications",
+	"advancements.meowdifications.root.description": "Discover cozy cat beds, furniture, toys, and care routines for your cats.",
+	"advancements.meowdifications.professional_purrvider.title": "Professional Purr-vider",
+	"advancements.meowdifications.professional_purrvider.description": "Obtain a cozy cat bed, scratching post, and litter box.",
+	"advancements.meowdifications.playtime.title": "Playtime!",
+	"advancements.meowdifications.playtime.description": "Craft a feather wand, yarn ball, or catnip mouse.",
+	"advancements.meowdifications.tidy_kitty.title": "Tidy Kitty",
+	"advancements.meowdifications.tidy_kitty.description": "Collect organic compost by cleaning a dirty litter box."
 }

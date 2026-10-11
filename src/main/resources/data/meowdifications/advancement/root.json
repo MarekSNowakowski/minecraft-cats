@@ -1,0 +1,33 @@
+{
+	"display": {
+		"icon": {
+			"id": "meowdifications:cat_bed"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.root.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.root.description"
+		},
+		"background": "minecraft:textures/block/oak_planks.png",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"tame_cat": {
+			"trigger": "minecraft:tame_animal",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:cat"
+						}
+					}
+				]
+			}
+		}
+	}
+}

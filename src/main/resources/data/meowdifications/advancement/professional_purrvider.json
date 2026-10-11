@@ -1,0 +1,56 @@
+{
+	"parent": "meowdifications:root",
+	"display": {
+		"icon": {
+			"id": "meowdifications:scratching_post"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.professional_purrvider.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.professional_purrvider.description"
+		},
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"has_bed": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:cat_bed"
+					}
+				]
+			}
+		},
+		"has_scratcher": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:scratching_post"
+					}
+				]
+			}
+		},
+		"has_litter_box": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:litter_box"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_bed",
+			"has_scratcher",
+			"has_litter_box"
+		]
+	]
+}

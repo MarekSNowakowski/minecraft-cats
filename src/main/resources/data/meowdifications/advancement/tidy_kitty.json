@@ -1,0 +1,29 @@
+{
+	"parent": "meowdifications:root",
+	"display": {
+		"icon": {
+			"id": "meowdifications:litter_scoop"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.tidy_kitty.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.tidy_kitty.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"has_compost": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:organic_compost"
+					}
+				]
+			}
+		}
+	}
+}

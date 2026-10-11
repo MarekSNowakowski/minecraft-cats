@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"W": {
+			"tag": "minecraft:wool"
+		},
+		"P": {
+			"tag": "minecraft:wooden_slabs"
+		}
+	},
+	"pattern": [
+		" W ",
+		"PPP"
+	],
+	"result": {
+		"count": 2,
+		"id": "meowdifications:wall_perch"
+	}
+}

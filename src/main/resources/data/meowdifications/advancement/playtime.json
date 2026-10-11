@@ -1,0 +1,33 @@
+{
+	"parent": "meowdifications:root",
+	"display": {
+		"icon": {
+			"id": "meowdifications:feather_wand"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.playtime.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.playtime.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"has_toy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"meowdifications:feather_wand",
+							"meowdifications:yarn_ball",
+							"meowdifications:catnip_mouse"
+						]
+					}
+				]
+			}
+		}
+	}
+}

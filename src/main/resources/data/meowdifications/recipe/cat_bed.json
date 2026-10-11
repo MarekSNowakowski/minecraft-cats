@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"#": {
+			"tag": "minecraft:wool"
+		},
+		"P": {
+			"tag": "minecraft:planks"
+		}
+	},
+	"pattern": [
+		"# #",
+		"PPP"
+	],
+	"result": {
+		"count": 1,
+		"id": "meowdifications:cat_bed"
+	}
+}
