@@ -3,7 +3,8 @@
 	"package": "com.keroen.meowdifications.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"CatMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
