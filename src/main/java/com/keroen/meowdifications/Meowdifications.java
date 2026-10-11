@@ -21,7 +21,11 @@ public class Meowdifications implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initializing Meowdifications - Purring to life!");
+		com.keroen.meowdifications.registry.ModSoundEvents.initialize();
+		com.keroen.meowdifications.registry.ModBlocks.initialize();
+		com.keroen.meowdifications.registry.ModItems.initialize();
+		com.keroen.meowdifications.registry.ModItemGroups.initialize();
 	}
 
 	public static Identifier id(String path) {

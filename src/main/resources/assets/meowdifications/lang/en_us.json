@@ -1,0 +1,20 @@
+{
+	"itemGroup.meowdifications": "Meowdifications",
+	"block.meowdifications.cat_bed": "Cozy Cat Bed",
+	"block.meowdifications.wall_perch": "Cat Wall Perch",
+	"block.meowdifications.scratching_post": "Sisal Scratching Post",
+	"block.meowdifications.cardboard_scratcher": "Cardboard Cat Scratcher",
+	"block.meowdifications.litter_box": "Cat Litter Box",
+	"item.meowdifications.feather_wand": "Feather Wand",
+	"item.meowdifications.yarn_ball": "Yarn Ball",
+	"item.meowdifications.catnip": "Catnip",
+	"item.meowdifications.catnip_mouse": "Catnip Mouse",
+	"item.meowdifications.cat_litter": "Cat Litter",
+	"item.meowdifications.litter_scoop": "Litter Scoop",
+	"item.meowdifications.organic_compost": "Organic Compost",
+	"subtitles.meowdifications.block.scratcher.scratch": "Cat claws scratcher",
+	"subtitles.meowdifications.block.litter_box.dig": "Cat digs in litter",
+	"subtitles.meowdifications.entity.cat.purr_content": "Cat purrs contentedly",
+	"subtitles.meowdifications.item.toy.squeak": "Toy squeaks",
+	"subtitles.meowdifications.item.feather_wand.swish": "Feather wand swishes"
+}
