@@ -1,4 +1,5 @@
 {
+  "parent": "minecraft:block/block",
   "textures": {
     "side": "meowdifications:block/cat_bed_side",
     "top": "meowdifications:block/cat_bed_top",

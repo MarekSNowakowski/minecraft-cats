@@ -4,7 +4,7 @@ import com.keroen.meowdifications.registry.ModSoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -29,17 +29,17 @@ public class FeatherWandItem extends Item {
 			ModSoundEvents.FEATHER_SWISH,
 			SoundSource.PLAYERS,
 			0.8f,
-			1.0f + level.random.nextFloat() * 0.3f
+			1.0f + level.getRandom().nextFloat() * 0.3f
 		);
 
-		player.getCooldowns().addCooldown(this, 15);
+		player.getCooldowns().addCooldown(stack, 15);
 
 		if (!level.isClientSide()) {
 			AABB searchBox = player.getBoundingBox().inflate(8.0);
 			List<Cat> nearbyCats = level.getEntitiesOfClass(Cat.class, searchBox);
 			for (Cat cat : nearbyCats) {
 				cat.getLookControl().setLookAt(player, 30.0f, 30.0f);
-				if (level.random.nextFloat() < 0.4f && cat.onGround()) {
+				if (level.getRandom().nextFloat() < 0.4f && cat.onGround()) {
 					cat.setDeltaMovement(cat.getDeltaMovement().add(0, 0.25, 0));
 				}
 			}

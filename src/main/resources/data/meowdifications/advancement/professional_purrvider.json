@@ -48,8 +48,12 @@
 	},
 	"requirements": [
 		[
-			"has_bed",
-			"has_scratcher",
+			"has_bed"
+		],
+		[
+			"has_scratcher"
+		],
+		[
 			"has_litter_box"
 		]
 	]

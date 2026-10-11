@@ -2,35 +2,41 @@
 	"block.scratcher.scratch": {
 		"subtitle": "subtitles.meowdifications.block.scratcher.scratch",
 		"sounds": [
-			"minecraft:block/wood/hit1",
-			"minecraft:block/wood/hit2",
-			"minecraft:block/wood/hit3"
+			"dig/wood1",
+			"dig/wood2",
+			"dig/wood3",
+			"dig/wood4"
 		]
 	},
 	"block.litter_box.dig": {
 		"subtitle": "subtitles.meowdifications.block.litter_box.dig",
 		"sounds": [
-			"minecraft:block/sand/step1",
-			"minecraft:block/sand/step2",
-			"minecraft:block/sand/step3"
+			"dig/sand1",
+			"dig/sand2",
+			"dig/sand3",
+			"dig/sand4"
 		]
 	},
 	"entity.cat.purr_content": {
 		"subtitle": "subtitles.meowdifications.entity.cat.purr_content",
 		"sounds": [
-			"minecraft:entity/cat/purr"
+			"mob/cat/purr1",
+			"mob/cat/purr2",
+			"mob/cat/purr3"
 		]
 	},
 	"item.toy.squeak": {
 		"subtitle": "subtitles.meowdifications.item.toy.squeak",
 		"sounds": [
-			"minecraft:entity/bat/takeoff"
+			"mob/bat/takeoff"
 		]
 	},
 	"item.feather_wand.swish": {
 		"subtitle": "subtitles.meowdifications.item.feather_wand.swish",
 		"sounds": [
-			"minecraft:entity/player/attack/sweep"
+			"entity/player/attack/sweep1",
+			"entity/player/attack/sweep2",
+			"entity/player/attack/sweep3"
 		]
 	}
 }

@@ -2,15 +2,9 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
 	"ingredients": [
-		{
-			"tag": "minecraft:sand"
-		},
-		{
-			"item": "minecraft:clay_ball"
-		},
-		{
-			"item": "minecraft:paper"
-		}
+		"#minecraft:sand",
+		"minecraft:clay_ball",
+		"minecraft:paper"
 	],
 	"result": {
 		"count": 4,

@@ -46,7 +46,7 @@ public class YarnBallItem extends Item {
 			level.addFreshEntity(yarnBall);
 		}
 
-		player.getCooldowns().addCooldown(this, 10);
+		player.getCooldowns().addCooldown(stack, 10);
 		return InteractionResult.SUCCESS;
 	}
 }

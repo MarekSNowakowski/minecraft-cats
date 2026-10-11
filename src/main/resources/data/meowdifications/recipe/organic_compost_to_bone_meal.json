@@ -2,9 +2,7 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
 	"ingredients": [
-		{
-			"item": "meowdifications:organic_compost"
-		}
+		"meowdifications:organic_compost"
 	],
 	"result": {
 		"count": 2,

@@ -2,12 +2,8 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
 	"key": {
-		"W": {
-			"tag": "minecraft:wool"
-		},
-		"P": {
-			"tag": "minecraft:wooden_slabs"
-		}
+		"W": "#minecraft:wool",
+		"P": "#minecraft:wooden_slabs"
 	},
 	"pattern": [
 		" W ",

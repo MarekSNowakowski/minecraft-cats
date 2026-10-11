@@ -11,9 +11,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -86,7 +86,7 @@ public class LitterBoxBlock extends HorizontalDirectionalBlock {
 
 		// Cleaning a dirty box with shovel or litter scoop
 		if (isDirty) {
-			boolean isCleaningTool = stack.getItem() instanceof ShovelItem || stack.is(ModItems.LITTER_SCOOP);
+			boolean isCleaningTool = stack.is(ItemTags.SHOVELS) || stack.is(ModItems.LITTER_SCOOP);
 			if (isCleaningTool) {
 				if (!level.isClientSide()) {
 					level.setBlock(pos, state.setValue(DIRTY, false), Block.UPDATE_ALL);

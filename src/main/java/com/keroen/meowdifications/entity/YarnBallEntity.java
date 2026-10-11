@@ -59,7 +59,6 @@ public class YarnBallEntity extends Entity implements ItemSupplier {
 
 	public void bat(Vec3 impulse) {
 		this.setDeltaMovement(impulse);
-		this.hasImpulse = true;
 		this.level().playSound(
 			null,
 			this.getX(),
@@ -87,11 +86,13 @@ public class YarnBallEntity extends Entity implements ItemSupplier {
 	}
 
 	@Override
-	public InteractionResult interact(Player player, InteractionHand hand) {
+	public InteractionResult interact(Player player, InteractionHand hand, Vec3 location) {
 		if (!this.level().isClientSide()) {
 			ItemStack stack = new ItemStack(ModItems.YARN_BALL);
 			if (!player.getInventory().add(stack)) {
-				this.spawnAtLocation(stack);
+				if (this.level() instanceof ServerLevel serverLevel) {
+					this.spawnAtLocation(serverLevel, stack);
+				}
 			}
 			this.discard();
 		}
@@ -101,7 +102,7 @@ public class YarnBallEntity extends Entity implements ItemSupplier {
 	@Override
 	public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
 		if (!this.isRemoved()) {
-			this.spawnAtLocation(new ItemStack(ModItems.YARN_BALL));
+			this.spawnAtLocation(level, new ItemStack(ModItems.YARN_BALL));
 			this.discard();
 			return true;
 		}
@@ -119,12 +120,12 @@ public class YarnBallEntity extends Entity implements ItemSupplier {
 	}
 
 	@Override
-	protected void readAdditionalSaveData(CompoundTag tag) {
-		this.age = tag.getInt("Age");
+	protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput input) {
+		this.age = input.getIntOr("Age", 0);
 	}
 
 	@Override
-	protected void addAdditionalSaveData(CompoundTag tag) {
-		tag.putInt("Age", this.age);
+	protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput output) {
+		output.putInt("Age", this.age);
 	}
 }

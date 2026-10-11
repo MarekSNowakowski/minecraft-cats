@@ -4,50 +4,65 @@ import com.keroen.meowdifications.Meowdifications;
 import com.keroen.meowdifications.item.CatnipMouseItem;
 import com.keroen.meowdifications.item.FeatherWandItem;
 import com.keroen.meowdifications.item.YarnBallItem;
+import java.util.function.Function;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
 public final class ModItems {
 	public static final Item FEATHER_WAND = register(
 		"feather_wand",
-		new FeatherWandItem(new Item.Properties().stacksTo(1))
+		FeatherWandItem::new,
+		new Item.Properties().stacksTo(1)
 	);
 
 	public static final Item YARN_BALL = register(
 		"yarn_ball",
-		new YarnBallItem(new Item.Properties().stacksTo(16))
+		YarnBallItem::new,
+		new Item.Properties().stacksTo(16)
 	);
 
 	public static final Item CATNIP = register(
 		"catnip",
-		new net.minecraft.world.item.ItemNameBlockItem(ModBlocks.CATNIP_CROP, new Item.Properties())
+		props -> new BlockItem(ModBlocks.CATNIP_CROP, props),
+		new Item.Properties()
 	);
 
 	public static final Item CATNIP_MOUSE = register(
 		"catnip_mouse",
-		new CatnipMouseItem(new Item.Properties().stacksTo(16))
+		CatnipMouseItem::new,
+		new Item.Properties().stacksTo(16)
 	);
 
 	public static final Item CAT_LITTER = register(
 		"cat_litter",
-		new Item(new Item.Properties())
+		Item::new,
+		new Item.Properties()
 	);
 
 	public static final Item LITTER_SCOOP = register(
 		"litter_scoop",
-		new Item(new Item.Properties().stacksTo(1))
+		Item::new,
+		new Item.Properties().stacksTo(1)
 	);
 
 	public static final Item ORGANIC_COMPOST = register(
 		"organic_compost",
-		new Item(new Item.Properties())
+		Item::new,
+		new Item.Properties()
 	);
 
-	public static <T extends Item> T register(String name, T item) {
-		Identifier id = Meowdifications.id(name);
-		return Registry.register(BuiltInRegistries.ITEM, id, item);
+	public static <T extends Item> T register(
+		String name,
+		Function<Item.Properties, T> factory,
+		Item.Properties properties
+	) {
+		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Meowdifications.id(name));
+		T item = factory.apply(properties.setId(key));
+		return Registry.register(BuiltInRegistries.ITEM, key, item);
 	}
 
 	public static void initialize() {

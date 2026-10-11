@@ -2,15 +2,9 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "equipment",
 	"key": {
-		"F": {
-			"item": "minecraft:feather"
-		},
-		"S": {
-			"item": "minecraft:string"
-		},
-		"/": {
-			"item": "minecraft:stick"
-		}
+		"F": "minecraft:feather",
+		"S": "minecraft:string",
+		"/": "minecraft:stick"
 	},
 	"pattern": [
 		"  F",

@@ -2,15 +2,9 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
 	"ingredients": [
-		{
-			"item": "meowdifications:catnip"
-		},
-		{
-			"item": "minecraft:string"
-		},
-		{
-			"tag": "minecraft:wool"
-		}
+		"meowdifications:catnip",
+		"minecraft:string",
+		"#minecraft:wool"
 	],
 	"result": {
 		"count": 1,

@@ -47,7 +47,7 @@ public class CardboardScratcherBlock extends HorizontalDirectionalBlock {
 			ModSoundEvents.SCRATCH,
 			SoundSource.BLOCKS,
 			0.8f,
-			1.1f + level.random.nextFloat() * 0.2f
+			1.1f + level.getRandom().nextFloat() * 0.2f
 		);
 
 		if (level instanceof ServerLevel serverLevel) {

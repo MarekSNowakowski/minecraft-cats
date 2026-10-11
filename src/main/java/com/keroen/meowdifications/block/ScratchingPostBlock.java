@@ -53,7 +53,7 @@ public class ScratchingPostBlock extends HorizontalDirectionalBlock {
 			ModSoundEvents.SCRATCH,
 			SoundSource.BLOCKS,
 			1.0f,
-			0.9f + level.random.nextFloat() * 0.2f
+			0.9f + level.getRandom().nextFloat() * 0.2f
 		);
 
 		if (level instanceof ServerLevel serverLevel) {

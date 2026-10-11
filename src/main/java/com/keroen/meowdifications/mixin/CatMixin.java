@@ -5,7 +5,7 @@ import com.keroen.meowdifications.entity.ai.UseLitterBoxGoal;
 import com.keroen.meowdifications.entity.ai.UseScratcherGoal;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

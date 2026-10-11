@@ -2,12 +2,8 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
 	"key": {
-		"P": {
-			"item": "minecraft:paper"
-		},
-		"S": {
-			"tag": "minecraft:wooden_slabs"
-		}
+		"P": "minecraft:paper",
+		"S": "#minecraft:wooden_slabs"
 	},
 	"pattern": [
 		"PPP",

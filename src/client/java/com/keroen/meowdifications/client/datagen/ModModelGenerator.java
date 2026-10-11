@@ -2,13 +2,13 @@ package com.keroen.meowdifications.client.datagen;
 
 import com.keroen.meowdifications.registry.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 
 public class ModModelGenerator extends FabricModelProvider {
-	public ModModelGenerator(FabricDataOutput output) {
+	public ModModelGenerator(FabricPackOutput output) {
 		super(output);
 	}
 

@@ -1,7 +1,6 @@
 package com.keroen.meowdifications.registry;
 
 import com.keroen.meowdifications.Meowdifications;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -12,7 +11,7 @@ public final class ModItemGroups {
 	public static final CreativeModeTab MEOWDIFICATIONS_TAB = Registry.register(
 		BuiltInRegistries.CREATIVE_MODE_TAB,
 		Meowdifications.id("meowdifications"),
-		FabricItemGroup.builder()
+		CreativeModeTab.builder(CreativeModeTab.Row.TOP, 7)
 			.icon(() -> new ItemStack(ModItems.FEATHER_WAND))
 			.title(Component.translatable("itemGroup.meowdifications"))
 			.displayItems((parameters, output) -> {

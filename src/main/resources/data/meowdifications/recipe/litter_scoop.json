@@ -2,12 +2,8 @@
 	"type": "minecraft:crafting_shaped",
 	"category": "equipment",
 	"key": {
-		"/": {
-			"item": "minecraft:stick"
-		},
-		"N": {
-			"item": "minecraft:iron_nugget"
-		}
+		"/": "minecraft:stick",
+		"N": "minecraft:iron_nugget"
 	},
 	"pattern": [
 		" N",
