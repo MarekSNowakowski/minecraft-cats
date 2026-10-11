@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "dirty=false,facing=north,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty"
+    },
+    "dirty=false,facing=south,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 180
+    },
+    "dirty=false,facing=west,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 270
+    },
+    "dirty=false,facing=east,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 90
+    },
+    "dirty=true,facing=north,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty"
+    },
+    "dirty=true,facing=south,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 180
+    },
+    "dirty=true,facing=west,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 270
+    },
+    "dirty=true,facing=east,fill_type=empty": {
+      "model": "meowdifications:block/litter_box_empty",
+      "y": 90
+    },
+    "dirty=false,facing=north,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_sand"
+    },
+    "dirty=false,facing=south,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_sand",
+      "y": 180
+    },
+    "dirty=false,facing=west,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_sand",
+      "y": 270
+    },
+    "dirty=false,facing=east,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_sand",
+      "y": 90
+    },
+    "dirty=true,facing=north,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_dirty"
+    },
+    "dirty=true,facing=south,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 180
+    },
+    "dirty=true,facing=west,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 270
+    },
+    "dirty=true,facing=east,fill_type=sand": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 90
+    },
+    "dirty=false,facing=north,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_litter"
+    },
+    "dirty=false,facing=south,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_litter",
+      "y": 180
+    },
+    "dirty=false,facing=west,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_litter",
+      "y": 270
+    },
+    "dirty=false,facing=east,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_litter",
+      "y": 90
+    },
+    "dirty=true,facing=north,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_dirty"
+    },
+    "dirty=true,facing=south,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 180
+    },
+    "dirty=true,facing=west,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 270
+    },
+    "dirty=true,facing=east,fill_type=litter": {
+      "model": "meowdifications:block/litter_box_dirty",
+      "y": 90
+    }
+  }
+}

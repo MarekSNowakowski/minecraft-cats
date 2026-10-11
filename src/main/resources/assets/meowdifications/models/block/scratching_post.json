@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "base": "meowdifications:block/scratching_post_base",
+    "post_side": "meowdifications:block/scratching_post_side",
+    "post_top": "meowdifications:block/scratching_post_top",
+    "particle": "meowdifications:block/scratching_post_side"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        2,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#base",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#base"
+        },
+        "north": {
+          "texture": "#base"
+        },
+        "south": {
+          "texture": "#base"
+        },
+        "west": {
+          "texture": "#base"
+        },
+        "east": {
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        2,
+        5
+      ],
+      "to": [
+        11,
+        16,
+        11
+      ],
+      "faces": {
+        "up": {
+          "texture": "#post_top"
+        },
+        "north": {
+          "texture": "#post_side"
+        },
+        "south": {
+          "texture": "#post_side"
+        },
+        "west": {
+          "texture": "#post_side"
+        },
+        "east": {
+          "texture": "#post_side"
+        }
+      }
+    }
+  ]
+}

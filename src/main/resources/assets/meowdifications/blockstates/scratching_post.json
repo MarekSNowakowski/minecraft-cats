@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/scratching_post"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/scratching_post",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/scratching_post",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/scratching_post",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/cardboard_scratcher"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/cardboard_scratcher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/cardboard_scratcher",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/cardboard_scratcher",
+      "y": 90
+    }
+  }
+}

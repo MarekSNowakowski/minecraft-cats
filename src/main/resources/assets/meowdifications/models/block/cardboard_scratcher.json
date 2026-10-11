@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "top": "meowdifications:block/cardboard_scratcher_top",
+    "side": "meowdifications:block/cardboard_scratcher_side",
+    "particle": "meowdifications:block/cardboard_scratcher_top"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        2,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#side",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}
