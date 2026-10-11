@@ -3,15 +3,15 @@
 	"id": "meowdifications",
 	"version": "${version}",
 	"name": "Meowdifications",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Enhances Minecraft cats with cozy cat beds, scratching posts, litter boxes, interactive toys, and enriched feline behaviors and player interactions.",
 	"authors": [
-		"Me!"
+		"Marek 'Keroen' Nowakowski"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://mareksnowakowski.github.io/projects/meowdifications/",
+		"sources": "https://mareksnowakowski.github.io/projects/meowdifications/"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/meowdifications/icon.png",
 	"environment": "*",
 	"entrypoints": {
