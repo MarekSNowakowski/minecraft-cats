@@ -31,22 +31,19 @@ public class YarnBallItem extends Item {
 		);
 
 		if (!level.isClientSide()) {
-			ItemStack tossedStack = stack.copyWithCount(1);
 			if (!player.getAbilities().instabuild) {
 				stack.shrink(1);
 			}
 
 			Vec3 look = player.getLookAngle();
-			ItemEntity itemEntity = new ItemEntity(
+			com.keroen.meowdifications.entity.YarnBallEntity yarnBall = new com.keroen.meowdifications.entity.YarnBallEntity(
 				level,
 				player.getX(),
 				player.getEyeY() - 0.2,
-				player.getZ(),
-				tossedStack
+				player.getZ()
 			);
-			itemEntity.setDeltaMovement(look.x * 0.7, look.y * 0.5 + 0.15, look.z * 0.7);
-			itemEntity.setPickUpDelay(20);
-			level.addFreshEntity(itemEntity);
+			yarnBall.setDeltaMovement(look.x * 0.75, look.y * 0.4 + 0.15, look.z * 0.75);
+			level.addFreshEntity(yarnBall);
 		}
 
 		player.getCooldowns().addCooldown(this, 10);

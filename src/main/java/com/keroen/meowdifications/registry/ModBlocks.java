@@ -41,6 +41,19 @@ public final class ModBlocks {
 		new LitterBoxBlock(BlockBehaviour.Properties.of().strength(1.0f).sound(SoundType.WOOD).noOcclusion())
 	);
 
+	public static final Block CATNIP_CROP = registerBlockOnly(
+		"catnip_crop",
+		new com.keroen.meowdifications.block.CatnipCropBlock(
+			BlockBehaviour.Properties.of().noCollision().ticksRandomly().instabreak().sound(SoundType.CROP)
+		)
+	);
+
+	private static <T extends Block> T registerBlockOnly(String name, T block) {
+		Identifier id = Meowdifications.id(name);
+		Registry.register(BuiltInRegistries.BLOCK, id, block);
+		return block;
+	}
+
 	private static <T extends Block> T registerBlock(String name, T block) {
 		Identifier id = Meowdifications.id(name);
 		Registry.register(BuiltInRegistries.BLOCK, id, block);

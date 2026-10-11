@@ -22,7 +22,7 @@ public final class ModItems {
 
 	public static final Item CATNIP = register(
 		"catnip",
-		new Item(new Item.Properties())
+		new net.minecraft.world.item.ItemNameBlockItem(ModBlocks.CATNIP_CROP, new Item.Properties())
 	);
 
 	public static final Item CATNIP_MOUSE = register(

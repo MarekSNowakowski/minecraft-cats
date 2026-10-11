@@ -24,6 +24,7 @@ public class Meowdifications implements ModInitializer {
 		LOGGER.info("Initializing Meowdifications - Purring to life!");
 		com.keroen.meowdifications.registry.ModSoundEvents.initialize();
 		com.keroen.meowdifications.registry.ModBlocks.initialize();
+		com.keroen.meowdifications.registry.ModEntities.initialize();
 		com.keroen.meowdifications.registry.ModItems.initialize();
 		com.keroen.meowdifications.registry.ModItemGroups.initialize();
 	}
