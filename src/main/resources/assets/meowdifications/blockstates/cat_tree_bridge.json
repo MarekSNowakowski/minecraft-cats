@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "meowdifications:block/cat_tree_bridge"
+    },
+    "axis=z": {
+      "model": "meowdifications:block/cat_tree_bridge",
+      "y": 90
+    }
+  }
+}

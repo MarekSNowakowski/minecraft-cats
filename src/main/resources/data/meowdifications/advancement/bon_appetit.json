@@ -1,0 +1,29 @@
+{
+	"parent": "meowdifications:root",
+	"display": {
+		"icon": {
+			"id": "meowdifications:pet_bowl"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.bon_appetit.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.bon_appetit.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"has_bowl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:pet_bowl"
+					}
+				]
+			}
+		}
+	}
+}

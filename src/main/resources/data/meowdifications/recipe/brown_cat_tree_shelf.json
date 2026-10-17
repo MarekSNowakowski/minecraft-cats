@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "minecraft:brown_wool",
+    "S": "#minecraft:wooden_slabs",
+    "/": "minecraft:stick"
+  },
+  "pattern": [
+    "W",
+    "S",
+    "/"
+  ],
+  "result": {
+    "count": 2,
+    "id": "meowdifications:brown_cat_tree_shelf"
+  }
+}

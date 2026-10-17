@@ -65,34 +65,75 @@ src/
 
 ## 4. Key Systems & Implementation Guide
 
-### 4.1. Cat Beds & Wall Perches (`com.keroen.meowdifications.block`)
+### 4.1. Cat Beds & Color Variants (`com.keroen.meowdifications.block`)
 
 #### A. Dedicated Cat Beds (`CatBedBlock`)
-- **Visuals**: Cushioned pet beds, woven baskets, and padded sleeping mats available in various dye colors or wood variants.
+- **Visuals**: Cushioned pet beds with wooden base and plush cushion available in all 16 `DyeColor` variants (`white_cat_bed`, `orange_cat_bed`, etc.) and default `cat_bed`.
 - **Voxel Shape & Nesting**: Bounded voxel shape designed to fit a curled-up cat entity comfortably.
 - **Behavior**:
+  - Implements `CatRestingSpot` interface and belongs to `#meowdifications:cat_beds` and `#meowdifications:cat_sleep_spots`.
   - Tamed and stray cats in an 8–16 block radius evaluate nearby unoccupied cat beds when tired or idle.
   - Cats curl up, sleep, and purr while in the bed.
   - Upon waking, cats stretch and may knead their paws ("making biscuits") on the soft cushion.
 
-#### B. Wall Perches & Shelves (`WallPerchBlock`)
+#### B. Wall Perches (`WallPerchBlock`)
 - **Visuals**: Wooden shelves and carpeted wall-mounted perches that attach to wall blocks.
 - **Behavior**:
+  - Implements `CatRestingSpot`.
   - Allows cats to pathfind vertically to high lookout spots in player bases.
   - Cats enjoy sitting on elevated perches to look down at their surroundings.
 
 ---
 
-### 4.2. Scratching Posts & Cat Trees (`com.keroen.meowdifications.block`)
+### 4.2. Modular Cat Trees & Scratchers (`com.keroen.meowdifications.block`)
 
-#### A. Scratching Posts & Boards (`ScratchingPostBlock`, `CardboardScratcherBlock`)
-- **Crafting**: Wood logs/planks wrapped in string/sisal, or crafted paper/cardboard scratching pads.
-- **Multi-Level Cat Trees**: Modular or multi-block posts with platforms allowing both scratching and perching.
-- **Behavior**:
-  - Cats build up an autonomous "scratching urge" over time.
-  - When the urge reaches a threshold, the cat seeks the nearest scratching post within range.
-  - While scratching, the cat faces the post, plays a clawing animation, emits scratching sounds (`block.meowdifications.scratcher.scratch`), and releases wood/fiber particles.
-  - Satisfying the urge prevents the cat from scratching at player wooden doors or furniture, and grants a short contentment buff (soft purring).
+#### A. Modular Cat Tree Architecture
+- **Scratching Poles (`ScratchingPoleBlock`)**:
+  - Sisal rope wrapped column with `AXIS` (Y, X, Z) support.
+  - Seamlessly stackable vertically and horizontally to create climbing trunks and crossbeams.
+  - Implements `CatScratcher`.
+- **Cat Tree Shelves (`CatTreeShelfBlock`)**:
+  - Modular perches with `ATTACHMENT` property (`PLATFORM` for top-of-pole or floor mounting, `WALL` for mounting against poles, condos, or walls).
+  - Available in all 16 `DyeColor` carpet variants.
+  - Implements `CatRestingSpot` (belongs to `#meowdifications:cat_sleep_spots`).
+- **Cat Condos (`CatCondoBlock`)**:
+  - Hollow wooden cube with cat doorway, interior resting pad, plush top roof cushion, and sisal scratching sides.
+  - Available in all 16 `DyeColor` cushion variants.
+  - Implements both `CatRestingSpot` and `CatScratcher`.
+- **Freestanding Scratchers (`ScratchingPostBlock`, `CardboardScratcherBlock`)**:
+  - Classic single-block scratchers implementing `CatScratcher`.
+- **Cat Tree Bridges (`CatTreeBridgeBlock`)**:
+  - Horizontal suspension bridge with wooden slats and side ropes along X and Z axes.
+  - Implements `CatRestingSpot`.
+- **Cat Hammocks (`CatHammockBlock`)**:
+  - Plush fabric cradles suspended by corner ropes in all 16 `DyeColor` variants.
+  - Implements `CatRestingSpot`.
+- **Dangling Tree Toys (`DanglingToyBlock`)**:
+  - Interactive ceiling and shelf-mounted swinging bell and feather pompom.
+- **Wall Corner Scratchers (`WallCornerScratcherBlock`)**:
+  - Outer-corner mounted sisal scratcher protecting building walls.
+  - Implements `CatScratcher`.
+- **AI Routines**:
+  - Cats autonomously climb modular cat trees by pathfinding up stepped shelves, condos, and bridges.
+  - Scratching urge steers cats toward any `CatScratcher` block (poles, posts, condos, cardboard, corner scratchers).
+  - Contentment and sleeping routines navigate to any unoccupied `CatRestingSpot` (shelves, condos, beds, hammocks, bridges).
+
+---
+
+### 4.3. Feeding & Daily Care Amenities (`com.keroen.meowdifications.block`, `item`)
+
+#### A. Ceramic Pet Bowl (`PetBowlBlock`)
+- **Block States**: `CONTENT` (`EMPTY`, `WATER`, `MILK`, `FISH`, `MEAT`)
+- **Interaction**: Players fill the bowl with water/milk buckets or bottles, raw/cooked fish, or poultry/meat. Sneak-clicking with an empty hand empties or retrieves food.
+- **AI Routine (`EatFromBowlGoal`)**: Cats autonomously detect filled bowls, pathfind to them, play licking/eating sounds, gain health/effects, and consume the bowl contents.
+
+#### B. Cat Grass Planter (`CatGrassBlock`)
+- **Block States**: `NIBBLES` (0 to 3)
+- **AI Routine (`NibbleCatGrassGoal`)**: Cats take gentle nibbles of indoor cat grass to soothe their stomachs and gain a 5-second Regeneration I buff. Players can regrow nibbled grass with bone meal.
+
+#### C. Cat Grooming Brush & Fur Mechanics (`CatBrushItem`, `ModItems.CAT_FUR_TUFT`)
+- **Brushing**: Right-clicking a cat with the grooming brush purrs, produces hearts, damages brush durability, and drops `cat_fur_tuft`.
+- **Crafting**: 4 fur tufts craft into white wool; 2 fur tufts craft into yarn balls or catnip mice.
 
 ---
 

@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "sisal": "meowdifications:block/scratching_post_side",
+    "wood": "meowdifications:block/wall_perch_side",
+    "particle": "meowdifications:block/scratching_post_side"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        14
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood"
+        },
+        "up": {
+          "texture": "#wood"
+        },
+        "north": {
+          "texture": "#sisal"
+        },
+        "south": {
+          "texture": "#wood",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#wood"
+        },
+        "east": {
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "from": [
+        14,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        14
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood"
+        },
+        "up": {
+          "texture": "#wood"
+        },
+        "west": {
+          "texture": "#sisal"
+        },
+        "east": {
+          "texture": "#wood",
+          "cullface": "east"
+        },
+        "north": {
+          "texture": "#wood"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "content=empty,facing=north": {
+      "model": "meowdifications:block/pet_bowl_empty"
+    },
+    "content=empty,facing=south": {
+      "model": "meowdifications:block/pet_bowl_empty",
+      "y": 180
+    },
+    "content=empty,facing=west": {
+      "model": "meowdifications:block/pet_bowl_empty",
+      "y": 270
+    },
+    "content=empty,facing=east": {
+      "model": "meowdifications:block/pet_bowl_empty",
+      "y": 90
+    },
+    "content=water,facing=north": {
+      "model": "meowdifications:block/pet_bowl_water"
+    },
+    "content=water,facing=south": {
+      "model": "meowdifications:block/pet_bowl_water",
+      "y": 180
+    },
+    "content=water,facing=west": {
+      "model": "meowdifications:block/pet_bowl_water",
+      "y": 270
+    },
+    "content=water,facing=east": {
+      "model": "meowdifications:block/pet_bowl_water",
+      "y": 90
+    },
+    "content=milk,facing=north": {
+      "model": "meowdifications:block/pet_bowl_milk"
+    },
+    "content=milk,facing=south": {
+      "model": "meowdifications:block/pet_bowl_milk",
+      "y": 180
+    },
+    "content=milk,facing=west": {
+      "model": "meowdifications:block/pet_bowl_milk",
+      "y": 270
+    },
+    "content=milk,facing=east": {
+      "model": "meowdifications:block/pet_bowl_milk",
+      "y": 90
+    },
+    "content=fish,facing=north": {
+      "model": "meowdifications:block/pet_bowl_fish"
+    },
+    "content=fish,facing=south": {
+      "model": "meowdifications:block/pet_bowl_fish",
+      "y": 180
+    },
+    "content=fish,facing=west": {
+      "model": "meowdifications:block/pet_bowl_fish",
+      "y": 270
+    },
+    "content=fish,facing=east": {
+      "model": "meowdifications:block/pet_bowl_fish",
+      "y": 90
+    },
+    "content=meat,facing=north": {
+      "model": "meowdifications:block/pet_bowl_meat"
+    },
+    "content=meat,facing=south": {
+      "model": "meowdifications:block/pet_bowl_meat",
+      "y": 180
+    },
+    "content=meat,facing=west": {
+      "model": "meowdifications:block/pet_bowl_meat",
+      "y": 270
+    },
+    "content=meat,facing=east": {
+      "model": "meowdifications:block/pet_bowl_meat",
+      "y": 90
+    }
+  }
+}

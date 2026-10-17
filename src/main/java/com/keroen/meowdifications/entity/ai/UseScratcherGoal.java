@@ -1,8 +1,8 @@
 package com.keroen.meowdifications.entity.ai;
 
-import com.keroen.meowdifications.block.CardboardScratcherBlock;
-import com.keroen.meowdifications.block.ScratchingPostBlock;
+import com.keroen.meowdifications.block.CatScratcher;
 import com.keroen.meowdifications.registry.ModSoundEvents;
+import com.keroen.meowdifications.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
@@ -69,10 +69,8 @@ public class UseScratcherGoal extends MoveToBlockGoal {
 			// Claw and scratch every 10 ticks
 			if (this.scratchingTicks % 10 == 0) {
 				BlockState state = this.cat.level().getBlockState(this.blockPos);
-				if (state.getBlock() instanceof ScratchingPostBlock post) {
-					post.performScratch(this.cat.level(), this.blockPos, state);
-				} else if (state.getBlock() instanceof CardboardScratcherBlock cardboard) {
-					cardboard.performScratch(this.cat.level(), this.blockPos, state);
+				if (state.getBlock() instanceof CatScratcher scratcher) {
+					scratcher.performScratch(this.cat.level(), this.blockPos, state);
 				}
 			}
 
@@ -93,6 +91,6 @@ public class UseScratcherGoal extends MoveToBlockGoal {
 	@Override
 	protected boolean isValidTarget(LevelReader level, BlockPos pos) {
 		BlockState state = level.getBlockState(pos);
-		return state.getBlock() instanceof ScratchingPostBlock || state.getBlock() instanceof CardboardScratcherBlock;
+		return state.getBlock() instanceof CatScratcher || state.is(ModTags.Blocks.SCRATCHERS);
 	}
 }

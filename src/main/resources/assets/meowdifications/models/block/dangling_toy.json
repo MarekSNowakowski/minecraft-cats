@@ -1,0 +1,98 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "string": "minecraft:block/string",
+    "bell": "minecraft:block/gold_block",
+    "feather": "minecraft:block/white_wool",
+    "particle": "minecraft:block/gold_block"
+  },
+  "elements": [
+    {
+      "from": [
+        7.5,
+        7,
+        7.5
+      ],
+      "to": [
+        8.5,
+        16,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#string"
+        },
+        "south": {
+          "texture": "#string"
+        },
+        "west": {
+          "texture": "#string"
+        },
+        "east": {
+          "texture": "#string"
+        }
+      }
+    },
+    {
+      "from": [
+        6.5,
+        4.5,
+        6.5
+      ],
+      "to": [
+        9.5,
+        7.5,
+        9.5
+      ],
+      "faces": {
+        "down": {
+          "texture": "#bell"
+        },
+        "up": {
+          "texture": "#bell"
+        },
+        "north": {
+          "texture": "#bell"
+        },
+        "south": {
+          "texture": "#bell"
+        },
+        "west": {
+          "texture": "#bell"
+        },
+        "east": {
+          "texture": "#bell"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        2,
+        7
+      ],
+      "to": [
+        9,
+        4.5,
+        9
+      ],
+      "faces": {
+        "down": {
+          "texture": "#feather"
+        },
+        "north": {
+          "texture": "#feather"
+        },
+        "south": {
+          "texture": "#feather"
+        },
+        "west": {
+          "texture": "#feather"
+        },
+        "east": {
+          "texture": "#feather"
+        }
+      }
+    }
+  ]
+}

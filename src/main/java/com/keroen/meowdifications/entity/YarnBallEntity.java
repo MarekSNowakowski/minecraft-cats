@@ -3,7 +3,6 @@ package com.keroen.meowdifications.entity;
 import com.keroen.meowdifications.registry.ModEntities;
 import com.keroen.meowdifications.registry.ModItems;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

@@ -117,4 +117,17 @@ public class LitterBoxBlock extends HorizontalDirectionalBlock {
 			level.playSound(null, pos, ModSoundEvents.LITTER_DIG, SoundSource.BLOCKS, 1.0f, 1.0f);
 		}
 	}
+
+	@Override
+	protected boolean hasAnalogOutputSignal(BlockState state) {
+		return true;
+	}
+
+	@Override
+	protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos, Direction direction) {
+		if (state.getValue(DIRTY)) {
+			return 3;
+		}
+		return state.getValue(FILL_TYPE) != LitterFillType.EMPTY ? 1 : 0;
+	}
 }

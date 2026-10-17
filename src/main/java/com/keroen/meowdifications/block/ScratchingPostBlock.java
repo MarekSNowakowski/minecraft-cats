@@ -18,7 +18,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class ScratchingPostBlock extends HorizontalDirectionalBlock {
+public class ScratchingPostBlock extends HorizontalDirectionalBlock implements CatScratcher {
 	private static final VoxelShape BASE = Block.box(2.0, 0.0, 2.0, 14.0, 2.0, 14.0);
 	private static final VoxelShape POST = Block.box(5.0, 2.0, 5.0, 11.0, 16.0, 11.0);
 	private static final VoxelShape SHAPE = Shapes.or(BASE, POST);
@@ -46,6 +46,7 @@ public class ScratchingPostBlock extends HorizontalDirectionalBlock {
 	/**
 	 * Called by AI goals or player interactions when a cat scratches the post.
 	 */
+	@Override
 	public void performScratch(Level level, BlockPos pos, BlockState state) {
 		level.playSound(
 			null,

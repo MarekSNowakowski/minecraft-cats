@@ -1,0 +1,88 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "wood": "meowdifications:block/wall_perch_bottom",
+    "rope": "meowdifications:block/scratching_post_side",
+    "particle": "meowdifications:block/wall_perch_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        10,
+        3
+      ],
+      "to": [
+        16,
+        12,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood"
+        },
+        "up": {
+          "texture": "#wood"
+        },
+        "north": {
+          "texture": "#wood"
+        },
+        "south": {
+          "texture": "#wood"
+        },
+        "west": {
+          "texture": "#wood"
+        },
+        "east": {
+          "texture": "#wood"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        12,
+        3
+      ],
+      "to": [
+        16,
+        14,
+        4
+      ],
+      "faces": {
+        "up": {
+          "texture": "#rope"
+        },
+        "north": {
+          "texture": "#rope"
+        },
+        "south": {
+          "texture": "#rope"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        12,
+        12
+      ],
+      "to": [
+        16,
+        14,
+        13
+      ],
+      "faces": {
+        "up": {
+          "texture": "#rope"
+        },
+        "north": {
+          "texture": "#rope"
+        },
+        "south": {
+          "texture": "#rope"
+        }
+      }
+    }
+  ]
+}

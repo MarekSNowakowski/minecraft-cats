@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#meowdifications:cat_beds",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:cyan_cat_bed"
+  }
+}

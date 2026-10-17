@@ -20,7 +20,7 @@
 			"conditions": {
 				"items": [
 					{
-						"items": "meowdifications:cat_bed"
+						"items": "#meowdifications:cat_beds"
 					}
 				]
 			}
@@ -30,7 +30,7 @@
 			"conditions": {
 				"items": [
 					{
-						"items": "meowdifications:scratching_post"
+						"items": "#meowdifications:scratchers"
 					}
 				]
 			}

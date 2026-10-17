@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "pot": "minecraft:block/flower_pot",
+    "dirt": "minecraft:block/dirt",
+    "grass": "minecraft:block/moss_block",
+    "particle": "minecraft:block/moss_block"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        3,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "#pot",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#dirt"
+        },
+        "north": {
+          "texture": "#pot"
+        },
+        "south": {
+          "texture": "#pot"
+        },
+        "west": {
+          "texture": "#pot"
+        },
+        "east": {
+          "texture": "#pot"
+        }
+      }
+    }
+  ]
+}

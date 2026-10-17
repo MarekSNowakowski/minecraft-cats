@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CatBedBlock extends HorizontalDirectionalBlock {
+public class CatBedBlock extends HorizontalDirectionalBlock implements CatRestingSpot {
 	public static final BooleanProperty OCCUPIED = BooleanProperty.create("occupied");
 	private static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 6.0, 15.0);
 
@@ -42,15 +42,5 @@ public class CatBedBlock extends HorizontalDirectionalBlock {
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING, OCCUPIED);
-	}
-
-	public static boolean isOccupied(BlockState state) {
-		return state.getValue(OCCUPIED);
-	}
-
-	public static void setOccupied(Level level, BlockPos pos, BlockState state, boolean occupied) {
-		if (state.hasProperty(OCCUPIED) && state.getValue(OCCUPIED) != occupied) {
-			level.setBlock(pos, state.setValue(OCCUPIED, occupied), Block.UPDATE_ALL);
-		}
 	}
 }

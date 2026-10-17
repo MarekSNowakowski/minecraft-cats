@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#meowdifications:cat_tree_parts",
+    "minecraft:brown_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:brown_cat_condo"
+  }
+}

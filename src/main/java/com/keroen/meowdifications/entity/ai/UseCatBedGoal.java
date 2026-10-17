@@ -1,8 +1,8 @@
 package com.keroen.meowdifications.entity.ai;
 
-import com.keroen.meowdifications.block.CatBedBlock;
-import com.keroen.meowdifications.block.WallPerchBlock;
+import com.keroen.meowdifications.block.CatRestingSpot;
 import com.keroen.meowdifications.registry.ModSoundEvents;
+import com.keroen.meowdifications.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
@@ -64,13 +64,13 @@ public class UseCatBedGoal extends MoveToBlockGoal {
 		if (this.isReachedTarget()) {
 			this.restingTicks++;
 
-			// Mark bed occupied
+			// Mark resting spot occupied
 			BlockState state = this.cat.level().getBlockState(this.blockPos);
-			if (state.getBlock() instanceof CatBedBlock) {
-				CatBedBlock.setOccupied(this.cat.level(), this.blockPos, state, true);
+			if (state.getBlock() instanceof CatRestingSpot spot) {
+				spot.setOccupied(this.cat.level(), this.blockPos, state, true);
 			}
 
-			// Cat curls up in bed
+			// Cat curls up in bed / shelf / condo
 			this.cat.setLying(true);
 
 			// Gentle purring occasionally
@@ -90,8 +90,8 @@ public class UseCatBedGoal extends MoveToBlockGoal {
 	private void releaseBed() {
 		if (this.blockPos != null) {
 			BlockState state = this.cat.level().getBlockState(this.blockPos);
-			if (state.getBlock() instanceof CatBedBlock) {
-				CatBedBlock.setOccupied(this.cat.level(), this.blockPos, state, false);
+			if (state.getBlock() instanceof CatRestingSpot spot) {
+				spot.setOccupied(this.cat.level(), this.blockPos, state, false);
 			}
 		}
 	}
@@ -99,9 +99,9 @@ public class UseCatBedGoal extends MoveToBlockGoal {
 	@Override
 	protected boolean isValidTarget(LevelReader level, BlockPos pos) {
 		BlockState state = level.getBlockState(pos);
-		if (state.getBlock() instanceof CatBedBlock) {
-			return !CatBedBlock.isOccupied(state);
+		if (state.getBlock() instanceof CatRestingSpot spot) {
+			return !spot.isOccupied(level, pos, state, this.cat);
 		}
-		return state.getBlock() instanceof WallPerchBlock;
+		return state.is(ModTags.Blocks.CAT_BEDS) || state.is(ModTags.Blocks.CAT_SLEEP_SPOTS);
 	}
 }

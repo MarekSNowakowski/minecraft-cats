@@ -55,6 +55,18 @@ public final class ModItems {
 		new Item.Properties()
 	);
 
+	public static final Item CAT_BRUSH = register(
+		"cat_brush",
+		com.keroen.meowdifications.item.CatBrushItem::new,
+		new Item.Properties().durability(64)
+	);
+
+	public static final Item CAT_FUR_TUFT = register(
+		"cat_fur_tuft",
+		Item::new,
+		new Item.Properties()
+	);
+
 	public static <T extends Item> T register(
 		String name,
 		Function<Item.Properties, T> factory,

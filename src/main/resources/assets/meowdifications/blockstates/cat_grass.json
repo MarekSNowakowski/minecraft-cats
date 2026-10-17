@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "nibbles=0": {
+      "model": "meowdifications:block/cat_grass_0"
+    },
+    "nibbles=1": {
+      "model": "meowdifications:block/cat_grass_1"
+    },
+    "nibbles=2": {
+      "model": "meowdifications:block/cat_grass_2"
+    },
+    "nibbles=3": {
+      "model": "meowdifications:block/cat_grass_3"
+    }
+  }
+}

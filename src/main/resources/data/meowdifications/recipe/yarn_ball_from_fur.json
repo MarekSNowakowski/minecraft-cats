@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "meowdifications:cat_fur_tuft",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "FS",
+    "SF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:yarn_ball"
+  }
+}

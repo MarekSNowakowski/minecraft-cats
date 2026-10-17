@@ -15,18 +15,54 @@ public final class ModItemGroups {
 			.icon(() -> new ItemStack(ModItems.FEATHER_WAND))
 			.title(Component.translatable("itemGroup.meowdifications"))
 			.displayItems((parameters, output) -> {
+				// Cat Beds
 				output.accept(ModBlocks.CAT_BED);
-				output.accept(ModBlocks.WALL_PERCH);
+				for (var bed : ModBlocks.CAT_BEDS.values()) {
+					output.accept(bed);
+				}
+
+				// Scratchers & Poles
 				output.accept(ModBlocks.SCRATCHING_POST);
+				output.accept(ModBlocks.SCRATCHING_POLE);
 				output.accept(ModBlocks.CARDBOARD_SCRATCHER);
+
+				// Cat Tree Shelves & Perches
+				output.accept(ModBlocks.WALL_PERCH);
+				output.accept(ModBlocks.CAT_TREE_SHELF);
+				for (var shelf : ModBlocks.CAT_TREE_SHELVES.values()) {
+					output.accept(shelf);
+				}
+
+				// Cat Condos
+				output.accept(ModBlocks.CAT_CONDO);
+				for (var condo : ModBlocks.CAT_CONDOS.values()) {
+					output.accept(condo);
+				}
+
+				// Modular Cat Tree Bridges & Hammocks
+				output.accept(ModBlocks.CAT_TREE_BRIDGE);
+				output.accept(ModBlocks.CAT_HAMMOCK);
+				for (var hammock : ModBlocks.CAT_HAMMOCKS.values()) {
+					output.accept(hammock);
+				}
+				output.accept(ModBlocks.WALL_CORNER_SCRATCHER);
+				output.accept(ModBlocks.DANGLING_TOY);
+
+				// Feeding & Care Amenities
+				output.accept(ModBlocks.PET_BOWL);
+				output.accept(ModBlocks.CAT_GRASS);
+				output.accept(ModItems.CAT_BRUSH);
+				output.accept(ModItems.CAT_FUR_TUFT);
 				output.accept(ModBlocks.LITTER_BOX);
+				output.accept(ModItems.CAT_LITTER);
+				output.accept(ModItems.LITTER_SCOOP);
+				output.accept(ModItems.ORGANIC_COMPOST);
+
+				// Interactive Toys & Treats
 				output.accept(ModItems.FEATHER_WAND);
 				output.accept(ModItems.YARN_BALL);
 				output.accept(ModItems.CATNIP);
 				output.accept(ModItems.CATNIP_MOUSE);
-				output.accept(ModItems.CAT_LITTER);
-				output.accept(ModItems.LITTER_SCOOP);
-				output.accept(ModItems.ORGANIC_COMPOST);
 			})
 			.build()
 	);

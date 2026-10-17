@@ -1,0 +1,29 @@
+{
+	"parent": "meowdifications:root",
+	"display": {
+		"icon": {
+			"id": "meowdifications:cat_brush"
+		},
+		"title": {
+			"translate": "advancements.meowdifications.spa_day.title"
+		},
+		"description": {
+			"translate": "advancements.meowdifications.spa_day.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"has_fur": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "meowdifications:cat_fur_tuft"
+					}
+				]
+			}
+		}
+	}
+}

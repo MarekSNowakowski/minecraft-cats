@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CardboardScratcherBlock extends HorizontalDirectionalBlock {
+public class CardboardScratcherBlock extends HorizontalDirectionalBlock implements CatScratcher {
 	private static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 2.0, 15.0);
 
 	public CardboardScratcherBlock(BlockBehaviour.Properties properties) {
@@ -40,6 +40,7 @@ public class CardboardScratcherBlock extends HorizontalDirectionalBlock {
 		builder.add(FACING);
 	}
 
+	@Override
 	public void performScratch(Level level, BlockPos pos, BlockState state) {
 		level.playSound(
 			null,

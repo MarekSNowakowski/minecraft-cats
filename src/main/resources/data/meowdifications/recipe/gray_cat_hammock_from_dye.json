@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#meowdifications:cat_hammocks",
+    "minecraft:gray_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:gray_cat_hammock"
+  }
+}

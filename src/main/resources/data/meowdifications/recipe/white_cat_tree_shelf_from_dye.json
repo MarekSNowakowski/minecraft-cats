@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#meowdifications:cat_tree_parts",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:white_cat_tree_shelf"
+  }
+}

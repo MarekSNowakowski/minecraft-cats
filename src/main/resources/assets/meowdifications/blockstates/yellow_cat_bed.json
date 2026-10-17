@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/yellow_cat_bed"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/yellow_cat_bed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/yellow_cat_bed",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/yellow_cat_bed",
+      "y": 90
+    }
+  }
+}

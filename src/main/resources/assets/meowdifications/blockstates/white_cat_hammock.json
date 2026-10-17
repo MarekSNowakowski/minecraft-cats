@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/white_cat_hammock"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/white_cat_hammock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/white_cat_hammock",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/white_cat_hammock",
+      "y": 90
+    }
+  }
+}

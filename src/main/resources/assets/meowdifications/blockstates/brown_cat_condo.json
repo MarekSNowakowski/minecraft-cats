@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/brown_cat_condo"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/brown_cat_condo",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/brown_cat_condo",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/brown_cat_condo",
+      "y": 90
+    }
+  }
+}

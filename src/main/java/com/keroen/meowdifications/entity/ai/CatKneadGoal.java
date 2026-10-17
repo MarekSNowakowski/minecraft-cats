@@ -1,7 +1,8 @@
 package com.keroen.meowdifications.entity.ai;
 
-import com.keroen.meowdifications.block.CatBedBlock;
+import com.keroen.meowdifications.block.CatRestingSpot;
 import com.keroen.meowdifications.registry.ModSoundEvents;
+import com.keroen.meowdifications.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -103,7 +104,9 @@ public class CatKneadGoal extends Goal {
 	}
 
 	private static boolean isKneadableSurface(BlockState state) {
-		return state.getBlock() instanceof CatBedBlock
+		return state.getBlock() instanceof CatRestingSpot
+			|| state.is(ModTags.Blocks.CAT_BEDS)
+			|| state.is(ModTags.Blocks.CAT_SLEEP_SPOTS)
 			|| state.is(BlockTags.WOOL)
 			|| state.is(BlockTags.WOOL_CARPETS)
 			|| state.is(BlockTags.BEDS);

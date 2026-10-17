@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "meowdifications:block/scratching_pole"
+    },
+    "axis=z": {
+      "model": "meowdifications:block/scratching_pole_horizontal"
+    },
+    "axis=x": {
+      "model": "meowdifications:block/scratching_pole_horizontal",
+      "y": 90
+    }
+  }
+}

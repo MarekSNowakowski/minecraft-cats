@@ -1,5 +1,10 @@
 package com.keroen.meowdifications.mixin;
 
+import com.keroen.meowdifications.entity.ai.CatAffectionGoal;
+import com.keroen.meowdifications.entity.ai.CatKneadGoal;
+import com.keroen.meowdifications.entity.ai.EatFromBowlGoal;
+import com.keroen.meowdifications.entity.ai.NibbleCatGrassGoal;
+import com.keroen.meowdifications.entity.ai.PlayWithToyGoal;
 import com.keroen.meowdifications.entity.ai.UseCatBedGoal;
 import com.keroen.meowdifications.entity.ai.UseLitterBoxGoal;
 import com.keroen.meowdifications.entity.ai.UseScratcherGoal;
@@ -21,11 +26,13 @@ public abstract class CatMixin extends TamableAnimal {
 	@Inject(method = "registerGoals", at = @At("TAIL"))
 	private void meowdifications$injectCustomCatGoals(CallbackInfo ci) {
 		Cat cat = (Cat) (Object) this;
-		this.goalSelector.addGoal(5, new com.keroen.meowdifications.entity.ai.PlayWithToyGoal(cat));
-		this.goalSelector.addGoal(6, new com.keroen.meowdifications.entity.ai.CatAffectionGoal(cat));
-		this.goalSelector.addGoal(6, new UseCatBedGoal(cat, 1.1, 16, 4));
-		this.goalSelector.addGoal(7, new UseScratcherGoal(cat, 1.0, 12, 3));
+		this.goalSelector.addGoal(5, new PlayWithToyGoal(cat));
+		this.goalSelector.addGoal(6, new CatAffectionGoal(cat));
+		this.goalSelector.addGoal(6, new UseCatBedGoal(cat, 1.1, 16, 6));
+		this.goalSelector.addGoal(7, new UseScratcherGoal(cat, 1.0, 14, 5));
 		this.goalSelector.addGoal(7, new UseLitterBoxGoal(cat, 1.0, 16, 3));
-		this.goalSelector.addGoal(8, new com.keroen.meowdifications.entity.ai.CatKneadGoal(cat));
+		this.goalSelector.addGoal(7, new EatFromBowlGoal(cat, 1.0, 14, 3));
+		this.goalSelector.addGoal(8, new NibbleCatGrassGoal(cat, 0.9, 10, 3));
+		this.goalSelector.addGoal(8, new CatKneadGoal(cat));
 	}
 }

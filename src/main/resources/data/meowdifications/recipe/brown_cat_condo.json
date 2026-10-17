@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "#minecraft:planks",
+    "W": "minecraft:brown_wool",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "PPP",
+    "SWS",
+    "P P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "meowdifications:brown_cat_condo"
+  }
+}

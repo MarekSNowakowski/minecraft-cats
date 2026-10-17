@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "meowdifications:block/wall_corner_scratcher"
+    },
+    "facing=south": {
+      "model": "meowdifications:block/wall_corner_scratcher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "meowdifications:block/wall_corner_scratcher",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "meowdifications:block/wall_corner_scratcher",
+      "y": 90
+    }
+  }
+}

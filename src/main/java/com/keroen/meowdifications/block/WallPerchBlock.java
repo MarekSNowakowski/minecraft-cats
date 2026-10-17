@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class WallPerchBlock extends HorizontalDirectionalBlock {
+public class WallPerchBlock extends HorizontalDirectionalBlock implements CatRestingSpot {
 	private static final VoxelShape SHAPE_NORTH = Block.box(0.0, 12.0, 0.0, 16.0, 16.0, 12.0);
 	private static final VoxelShape SHAPE_SOUTH = Block.box(0.0, 12.0, 4.0, 16.0, 16.0, 16.0);
 	private static final VoxelShape SHAPE_WEST = Block.box(0.0, 12.0, 0.0, 12.0, 16.0, 16.0);
